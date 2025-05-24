@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "ink": "^5.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -35,6 +36,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-storybook": "^0.12.0",
     "globals": "^16.0.0",
+    "loki": "^0.35.1",
     "playwright": "^1.52.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.6.14",
@@ -45,5 +47,20 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
